@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Manifesto from "./pages/Manifesto";
 import Donate from "./pages/Donate";
 import Governance from "./pages/Governance";
+import PCRevolution from "./pages/PCRevolution";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/manifesto" element={<Manifesto />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/governance" element={<Governance />} />
+          <Route path="/pc-revolution" element={<PCRevolution />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
