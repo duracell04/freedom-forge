@@ -97,13 +97,24 @@ export const FullManifesto = () => {
         <p className="text-2xl mb-6">
           AKA8 runs entirely on your device. Your phone. Your laptop. Your hardware. Your mind stays yours.
         </p>
-        <div className="bg-card/30 border border-freedom-blue/30 rounded-lg p-6 text-center">
-          <p className="text-xl font-mono text-freedom-blue">
-            Airplane mode: ON<br />
-            Data leaving device: ZERO<br />
-            Your thoughts: YOURS
-          </p>
-        </div>
+        {(() => {
+          const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 });
+          return (
+            <div ref={ref} className={`bg-card/30 border border-freedom-blue/30 rounded-lg p-6 text-center ${isVisible ? 'visible' : ''}`}>
+              <p className="text-xl font-mono text-freedom-blue space-y-2">
+                <span className="block">
+                  Airplane mode: <span className="inline-block animate-on-scroll stagger-1">ON</span>
+                </span>
+                <span className="block">
+                  Data leaving device: <span className="inline-block animate-on-scroll stagger-2">ZERO</span>
+                </span>
+                <span className="block">
+                  Your thoughts: <span className="inline-block animate-on-scroll stagger-3">YOURS</span>
+                </span>
+              </p>
+            </div>
+          );
+        })()}
       </ManifestoSection>
 
       {/* Section 5: Our Principles */}
