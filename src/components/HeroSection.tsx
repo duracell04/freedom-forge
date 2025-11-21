@@ -63,6 +63,15 @@ export const HeroSection = () => {
                 <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
+            <a href="/donate">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-xl px-12 py-8 border-2 border-freedom-blue text-freedom-blue hover:bg-freedom-blue/10 font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105"
+              >
+                Support the Project
+              </Button>
+            </a>
           </div>
 
           {/* Scroll indicator */}
