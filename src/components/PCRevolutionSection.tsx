@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Cpu, Smartphone } from "lucide-react";
-import pcImage from "@/assets/pc-revolution.jpg";
+// import pcImage from "@/assets/pc-revolution.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const PCRevolutionSection = () => {
@@ -24,14 +24,14 @@ export const PCRevolutionSection = () => {
           </div>
 
           {/* Split timeline visual */}
-          <div ref={imageAnim.ref} className={`relative mb-16 animate-on-scroll-scale ${imageAnim.isVisible ? 'visible' : ''}`}>
+          {/* <div ref={imageAnim.ref} className={`relative mb-16 animate-on-scroll-scale ${imageAnim.isVisible ? 'visible' : ''}`}>
             <img
               src={pcImage}
               alt="Evolution from mainframe to personal AI"
               className="w-full rounded-lg shadow-2xl"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent rounded-lg" />
-          </div>
+          </div> */}
 
           {/* Timeline comparison */}
           <div ref={timelineAnim.ref} className="grid md:grid-cols-3 gap-8 mb-16">
