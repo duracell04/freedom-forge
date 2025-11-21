@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, Cpu, Smartphone } from "lucide-react";
 // import pcImage from "@/assets/pc-revolution.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { NavLink } from "@/components/NavLink";
 
 export const PCRevolutionSection = () => {
   const headerAnim = useScrollAnimation({ threshold: 0.2 });
@@ -93,6 +95,18 @@ export const PCRevolutionSection = () => {
                 <h4 className="text-xl font-bold mb-3 text-freedom-blue">2025: "AI is for tech giants"</h4>
                 <p className="text-foreground/90">Now comes AKA8. Intelligence becomes personal.</p>
               </Card>
+            </div>
+            
+            <div className="text-center mt-8">
+              <NavLink to="/pc-revolution">
+                <Button 
+                  variant="link"
+                  className="text-lg text-freedom-blue/80 hover:text-freedom-blue underline-offset-4"
+                >
+                  Read More
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </NavLink>
             </div>
           </div>
         </div>
