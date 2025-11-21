@@ -117,8 +117,8 @@ export const FullManifesto = () => {
             { icon: Zap, title: "Augmentation, Not Replacement", desc: "Amplifies human intelligence." },
             { icon: Users, title: "Universal Access", desc: "Not elite privilege." },
           ].map((principle, i) => (
-            <Card key={i} className="bg-secondary/30 border-freedom-blue/20 p-6">
-              <principle.icon className="w-10 h-10 text-freedom-blue mb-4" />
+            <Card key={i} className="bg-secondary/30 border-freedom-blue/20 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-freedom-blue/20 hover:border-freedom-blue/40 cursor-pointer">
+              <principle.icon className="w-10 h-10 text-freedom-blue mb-4 transition-transform duration-300 group-hover:scale-110" />
               <h4 className="text-xl font-bold mb-2 text-foreground">{principle.title}</h4>
               <p className="text-foreground/70">{principle.desc}</p>
             </Card>
