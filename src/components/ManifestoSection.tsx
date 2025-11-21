@@ -135,14 +135,9 @@ export const FullManifesto = () => {
             { phase: "Phase 3", title: "Ecosystem", desc: "Developer APIs & community plugins" },
             { phase: "Phase 4", title: "Revolution", desc: "Cognitive sovereignty becomes the norm" },
           ].map((phase, i) => (
-            <div key={i} className="flex items-start gap-6">
-              <div className="flex-shrink-0 w-24 h-24 rounded-full bg-gradient-to-br from-freedom-blue to-secondary flex items-center justify-center text-2xl font-black">
-                {i + 1}
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold text-freedom-blue mb-2">{phase.phase}: {phase.title}</h4>
-                <p className="text-foreground/80">{phase.desc}</p>
-              </div>
+            <div key={i} className="border-l-4 border-freedom-blue pl-6 py-2">
+              <h4 className="text-2xl font-bold text-freedom-blue mb-2">{phase.phase}: {phase.title}</h4>
+              <p className="text-foreground/80">{phase.desc}</p>
             </div>
           ))}
         </div>
