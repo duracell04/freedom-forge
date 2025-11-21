@@ -100,15 +100,15 @@ export const FullManifesto = () => {
           AKA8 runs entirely on your device. Your phone. Your laptop. Your hardware. Your mind stays yours.
         </p>
         <div ref={cogSovAnim.ref} className={`bg-card/30 border border-freedom-blue/30 rounded-lg p-6 text-center ${cogSovAnim.isVisible ? 'visible' : ''}`}>
-          <p className="text-xl font-mono text-freedom-blue space-y-2">
+          <p className="text-xl font-mono text-freedom-blue space-y-3">
             <span className="block">
-              Airplane mode: <span className={`inline-block animate-on-scroll stagger-1 ${cogSovAnim.isVisible ? 'visible' : ''}`}>ON</span>
+              Airplane mode: <span className={`inline-block animate-epic-reveal stagger-1 font-bold text-2xl transition-all duration-300 ${cogSovAnim.isVisible ? 'visible drop-shadow-[0_0_15px_hsl(var(--freedom-blue))]' : ''}`}>ON</span>
             </span>
             <span className="block">
-              Data leaving device: <span className={`inline-block animate-on-scroll stagger-2 ${cogSovAnim.isVisible ? 'visible' : ''}`}>ZERO</span>
+              Data leaving device: <span className={`inline-block animate-epic-reveal stagger-2 font-bold text-2xl transition-all duration-300 ${cogSovAnim.isVisible ? 'visible drop-shadow-[0_0_15px_hsl(var(--freedom-blue))]' : ''}`}>ZERO</span>
             </span>
             <span className="block">
-              Your thoughts: <span className={`inline-block animate-on-scroll stagger-3 ${cogSovAnim.isVisible ? 'visible' : ''}`}>YOURS</span>
+              Your thoughts: <span className={`inline-block animate-epic-reveal stagger-3 font-bold text-2xl transition-all duration-300 ${cogSovAnim.isVisible ? 'visible drop-shadow-[0_0_15px_hsl(var(--freedom-blue))]' : ''}`}>YOURS</span>
             </span>
           </p>
         </div>
