@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { Shield, Lock, Cpu, Users, Zap, Globe, TrendingUp, Clock, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Shield, Lock, Cpu, Users, Zap, Globe, TrendingUp, Clock, Heart, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface SectionProps {
   title: string;
@@ -41,6 +43,14 @@ export const FullManifesto = () => {
           </p>
           <p className="mt-4 text-titanium">— Andro Kasrashvili (AKA)</p>
         </Card>
+        <div className="mt-8 text-center">
+          <Link to="/manifesto">
+            <Button variant="outline" className="border-freedom-blue/30 text-freedom-blue hover:bg-freedom-blue/10 gap-2">
+              <FileText className="w-5 h-5" />
+              Read Full Manifesto
+            </Button>
+          </Link>
+        </div>
       </ManifestoSection>
 
       {/* Section 2: The Problem */}
