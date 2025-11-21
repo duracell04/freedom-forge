@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, Lock, Cpu, Users, Zap, Globe, TrendingUp, Clock, Heart, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 interface SectionProps {
   title: string;
@@ -10,6 +11,8 @@ interface SectionProps {
 }
 
 const ManifestoSection = ({ title, children, variant = "default" }: SectionProps) => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+  
   const variantClasses = {
     default: "border-border bg-card/50",
     warning: "border-rebel-red/30 bg-rebel-red/5",
@@ -17,9 +20,9 @@ const ManifestoSection = ({ title, children, variant = "default" }: SectionProps
   };
 
   return (
-    <div className="parallax-section">
+    <div className="parallax-section" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className={`max-w-5xl mx-auto border ${variantClasses[variant]} backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-2xl animate-slide-up`}>
+        <div className={`max-w-5xl mx-auto border ${variantClasses[variant]} backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-2xl animate-on-scroll-large ${isVisible ? 'visible' : ''}`}>
           <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-8 text-foreground">
             {title}
           </h2>

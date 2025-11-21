@@ -1,10 +1,13 @@
 import { Card } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const Footer = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 });
+
   return (
     <footer className="relative py-20 border-t border-border">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+        <div ref={ref} className={`max-w-4xl mx-auto text-center space-y-8 animate-on-scroll ${isVisible ? 'visible' : ''}`}>
           {/* Main commitment */}
           <Card className="bg-card/30 backdrop-blur-sm border-freedom-blue/30 p-12">
             <p className="text-2xl md:text-3xl font-bold text-foreground mb-4">

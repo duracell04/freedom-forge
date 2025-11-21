@@ -1,14 +1,20 @@
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Cpu, Smartphone } from "lucide-react";
 import pcImage from "@/assets/pc-revolution.jpg";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const PCRevolutionSection = () => {
+  const headerAnim = useScrollAnimation({ threshold: 0.2 });
+  const imageAnim = useScrollAnimation({ threshold: 0.3 });
+  const timelineAnim = useScrollAnimation({ threshold: 0.2 });
+  const quoteAnim = useScrollAnimation({ threshold: 0.3 });
+
   return (
     <section className="parallax-section relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 animate-slide-up">
+          <div ref={headerAnim.ref} className={`text-center mb-16 animate-on-scroll ${headerAnim.isVisible ? 'visible' : ''}`}>
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tight mb-6 text-foreground">
               The Personal Computer Revolution, Again
             </h2>
@@ -18,7 +24,7 @@ export const PCRevolutionSection = () => {
           </div>
 
           {/* Split timeline visual */}
-          <div className="relative mb-16">
+          <div ref={imageAnim.ref} className={`relative mb-16 animate-on-scroll-scale ${imageAnim.isVisible ? 'visible' : ''}`}>
             <img
               src={pcImage}
               alt="Evolution from mainframe to personal AI"
@@ -28,9 +34,9 @@ export const PCRevolutionSection = () => {
           </div>
 
           {/* Timeline comparison */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div ref={timelineAnim.ref} className="grid md:grid-cols-3 gap-8 mb-16">
             {/* 1960s */}
-            <Card className="bg-secondary/30 border-titanium/30 p-8 relative">
+            <Card className={`bg-secondary/30 border-titanium/30 p-8 relative animate-on-scroll-left ${timelineAnim.isVisible ? 'visible' : ''}`}>
               <div className="absolute top-4 right-4 text-sm text-titanium font-bold">1960s</div>
               <Cpu className="w-16 h-16 text-titanium mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-foreground">The Mainframe Era</h3>
@@ -51,7 +57,7 @@ export const PCRevolutionSection = () => {
             </div>
 
             {/* 2025+ */}
-            <Card className="bg-freedom-blue/10 border-freedom-blue/30 p-8 relative">
+            <Card className={`bg-freedom-blue/10 border-freedom-blue/30 p-8 relative animate-on-scroll-right ${timelineAnim.isVisible ? 'visible' : ''}`}>
               <div className="absolute top-4 right-4 text-sm text-freedom-blue font-bold">2025+</div>
               <Smartphone className="w-16 h-16 text-freedom-blue mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-foreground">The Personal AI Era</h3>
@@ -68,7 +74,7 @@ export const PCRevolutionSection = () => {
           </div>
 
           {/* Center quote */}
-          <Card className="bg-card/50 backdrop-blur-sm border-freedom-blue/30 p-12 text-center">
+          <Card ref={quoteAnim.ref} className={`bg-card/50 backdrop-blur-sm border-freedom-blue/30 p-12 text-center animate-on-scroll-scale ${quoteAnim.isVisible ? 'visible' : ''}`}>
             <blockquote className="text-3xl md:text-5xl font-black leading-tight text-foreground mb-6">
               "AKALabs is doing for AI what was done for computers: turning planet-sized machines into something every human carries in their pocket and truly owns."
             </blockquote>
