@@ -65,9 +65,12 @@ export const PCRevolutionSection = () => {
           {/* Center quote */}
           <Card ref={quoteAnim.ref} className={`bg-card/50 backdrop-blur-sm border-freedom-blue/30 p-12 text-center animate-on-scroll-scale ${quoteAnim.isVisible ? 'visible' : ''}`}>
             <blockquote className="text-3xl md:text-5xl font-black leading-tight text-foreground mb-6">
-              "AKALabs is doing for AI what was done for computers: turning planet-sized machines into something every human carries in their pocket and truly owns."
+              "Mainframes → PCs.<br/>
+              Superclusters → your pocket.<br/>
+              Time to make AI personal and untouchable.<br/>
+              AKAFreedom. Now."
             </blockquote>
-            <p className="text-xl text-freedom-blue">— The AKAFreedom Manifesto</p>
+            <p className="text-xl text-freedom-blue">— The AKAFreedom</p>
           </Card>
 
           {/* Historical parallels */}
