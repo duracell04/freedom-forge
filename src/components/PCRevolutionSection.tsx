@@ -64,13 +64,13 @@ export const PCRevolutionSection = () => {
 
           {/* Center quote */}
           <Card ref={quoteAnim.ref} className={`bg-card/50 backdrop-blur-sm border-freedom-blue/30 p-12 text-center animate-on-scroll-scale ${quoteAnim.isVisible ? 'visible' : ''}`}>
-            <blockquote className="text-3xl md:text-5xl font-black leading-tight text-foreground mb-6">
-              "Mainframes → PCs.<br/>
-              Superclusters → your pocket.<br/>
-              Time to make AI personal and untouchable.<br/>
-              AKAFreedom. Now."
-            </blockquote>
-            <p className="text-xl text-freedom-blue">— The AKAFreedom</p>
+            <div className="text-3xl md:text-5xl font-black leading-tight text-foreground">
+              <p className="mb-2">Mainframes → PCs.</p>
+              <p className="mb-2">Superclusters → your pocket.</p>
+              <p className="mb-2">Time to make AI personal and untouchable.</p>
+              <p className="mb-2">AKAFreedom.</p>
+              <p className="text-freedom-blue">Now.</p>
+            </div>
           </Card>
 
           {/* Historical parallels */}
