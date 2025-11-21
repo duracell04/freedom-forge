@@ -95,12 +95,11 @@ export const BlockchainSection = () => {
             </p>
             <NavLink to="/governance">
               <Button 
-                size="lg" 
-                variant="outline"
-                className="text-lg px-8 py-6 border-freedom-blue text-freedom-blue hover:bg-freedom-blue/10"
+                variant="link"
+                className="text-lg text-freedom-blue/80 hover:text-freedom-blue underline-offset-4"
               >
                 Read More About Governance
-                <ArrowRight className="ml-2" />
+                <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </NavLink>
           </div>
