@@ -99,9 +99,9 @@ export const FullManifesto = () => {
         </p>
         <div className="bg-card/30 border border-freedom-blue/30 rounded-lg p-6 text-center">
           <p className="text-xl font-mono text-freedom-blue">
-            ✈️ Airplane mode: ON<br />
-            🔒 Data leaving device: ZERO<br />
-            🧠 Your thoughts: YOURS
+            Airplane mode: ON<br />
+            Data leaving device: ZERO<br />
+            Your thoughts: YOURS
           </p>
         </div>
       </ManifestoSection>
