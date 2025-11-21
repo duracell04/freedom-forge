@@ -1,22 +1,22 @@
-# Welcome to your Lovable project
+# Welcome to your akalabs.io project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/7ff15809-0f59-4aea-b997-3ad4eb71a67a
+**URL**: https://akalabs.io/projects/7ff15809-0f59-4aea-b997-3ad4eb71a67a
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use akalabs.io**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7ff15809-0f59-4aea-b997-3ad4eb71a67a) and start prompting.
+Simply visit the [akalabs.io project](https://akalabs.io/projects/7ff15809-0f59-4aea-b997-3ad4eb71a67a) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+Changes made via akalabs.io will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in akalabs.io.
 
 You'll need Node.js with pnpm ([install with Corepack](https://pnpm.io/installation)) available locally.
 
@@ -62,12 +62,12 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/7ff15809-0f59-4aea-b997-3ad4eb71a67a) and click on Share -> Publish.
+Simply open [akalabs.io](https://akalabs.io/projects/7ff15809-0f59-4aea-b997-3ad4eb71a67a) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain to my akalabs.io project?
 
 Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Read more here: [Setting up a custom domain](https://docs.akalabs.io/features/custom-domain#custom-domain)
