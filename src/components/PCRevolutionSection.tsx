@@ -37,19 +37,12 @@ export const PCRevolutionSection = () => {
 
           {/* Timeline comparison */}
           <div ref={timelineAnim.ref} className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* 1960s */}
-            <Card className={`bg-secondary/30 border-titanium/30 p-8 relative animate-on-scroll-left ${timelineAnim.isVisible ? 'visible' : ''}`}>
-              <div className="absolute top-4 right-4 text-sm text-titanium font-bold">1960s</div>
+            {/* Mainframe Era */}
+            <Card className={`bg-secondary/30 border-titanium/30 p-8 flex flex-col items-center justify-center text-center animate-on-scroll-left ${timelineAnim.isVisible ? 'visible' : ''}`}>
               <Cpu className="w-16 h-16 text-titanium mb-6" />
-              <h3 className="text-2xl font-bold mb-4 text-foreground">The Mainframe Era</h3>
-              <ul className="space-y-2 text-foreground/70">
-                <li>• Room-sized machines</li>
-                <li>• Corporate-only access</li>
-                <li>• Computing as privilege</li>
-                <li>• Rent time, never own</li>
-              </ul>
-              <div className="mt-6 text-center text-titanium font-bold">
-                AI = Giant Corporate Infrastructure
+              <h3 className="text-2xl font-bold mb-8 text-foreground">The Mainframe Era</h3>
+              <div className="text-xl text-titanium font-bold">
+                Giant Corporate Infrastructure
               </div>
             </Card>
 
@@ -58,19 +51,13 @@ export const PCRevolutionSection = () => {
               <ArrowRight className="w-24 h-24 text-freedom-blue animate-pulse" />
             </div>
 
-            {/* 2025+ */}
-            <Card className={`bg-freedom-blue/10 border-freedom-blue/30 p-8 relative animate-on-scroll-right ${timelineAnim.isVisible ? 'visible' : ''}`}>
+            {/* Personal AI Era */}
+            <Card className={`bg-freedom-blue/10 border-freedom-blue/30 p-8 relative flex flex-col items-center justify-center text-center animate-on-scroll-right ${timelineAnim.isVisible ? 'visible' : ''}`}>
               <div className="absolute top-4 right-4 text-sm text-freedom-blue font-bold">2025+</div>
               <Smartphone className="w-16 h-16 text-freedom-blue mb-6" />
-              <h3 className="text-2xl font-bold mb-4 text-foreground">The Personal AI Era</h3>
-              <ul className="space-y-2 text-foreground/90">
-                <li>• Pocket-sized power</li>
-                <li>• Universal access</li>
-                <li>• Computing as right</li>
-                <li>• Own it forever</li>
-              </ul>
-              <div className="mt-6 text-center text-freedom-blue font-bold">
-                AI = Personal Intelligence
+              <h3 className="text-2xl font-bold mb-8 text-foreground">The Personal AI Era</h3>
+              <div className="text-xl text-freedom-blue font-bold">
+                Personal Intelligence
               </div>
             </Card>
           </div>
