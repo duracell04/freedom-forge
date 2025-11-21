@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
-import { Shield, AlertTriangle, TrendingDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Shield, AlertTriangle, TrendingDown, ArrowRight } from "lucide-react";
 // import blockchainImage from "@/assets/blockchain-governance.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { NavLink } from "@/components/NavLink";
 
 export const BlockchainSection = () => {
   const headerAnim = useScrollAnimation({ threshold: 0.2 });
@@ -88,9 +90,19 @@ export const BlockchainSection = () => {
 
           {/* Bottom tagline */}
           <div className="text-center mt-16">
-            <p className="text-3xl font-black text-freedom-blue">
+            <p className="text-3xl font-black text-freedom-blue mb-8">
               No oligarchy possible. Ever.
             </p>
+            <NavLink to="/governance">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="text-lg px-8 py-6 border-freedom-blue text-freedom-blue hover:bg-freedom-blue/10"
+              >
+                Read More About Governance
+                <ArrowRight className="ml-2" />
+              </Button>
+            </NavLink>
           </div>
         </div>
       </div>
