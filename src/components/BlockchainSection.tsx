@@ -1,14 +1,20 @@
 import { Card } from "@/components/ui/card";
 import { Shield, AlertTriangle, TrendingDown } from "lucide-react";
 import blockchainImage from "@/assets/blockchain-governance.jpg";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const BlockchainSection = () => {
+  const headerAnim = useScrollAnimation({ threshold: 0.2 });
+  const imageAnim = useScrollAnimation({ threshold: 0.3 });
+  const protocolAnim = useScrollAnimation({ threshold: 0.2 });
+  const cardsAnim = useScrollAnimation({ threshold: 0.2 });
+
   return (
     <section className="parallax-section relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 animate-slide-up">
+          <div ref={headerAnim.ref} className={`text-center mb-16 animate-on-scroll ${headerAnim.isVisible ? 'visible' : ''}`}>
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tight mb-6 text-foreground">
               Decentralized Ownership via Blockchain
             </h2>
@@ -18,7 +24,7 @@ export const BlockchainSection = () => {
           </div>
 
           {/* Visual */}
-          <div className="relative mb-16">
+          <div ref={imageAnim.ref} className={`relative mb-16 animate-on-scroll-scale ${imageAnim.isVisible ? 'visible' : ''}`}>
             <img
               src={blockchainImage}
               alt="Blockchain anti-oligarchy protocol"
@@ -28,7 +34,7 @@ export const BlockchainSection = () => {
           </div>
 
           {/* Anti-Oligarchy Protocol */}
-          <Card className="bg-card/50 backdrop-blur-sm border-rebel-red/30 p-8 md:p-12 mb-12">
+          <Card ref={protocolAnim.ref} className={`bg-card/50 backdrop-blur-sm border-rebel-red/30 p-8 md:p-12 mb-12 animate-on-scroll-large ${protocolAnim.isVisible ? 'visible' : ''}`}>
             <div className="flex items-start gap-6 mb-8">
               <AlertTriangle className="w-16 h-16 text-rebel-red flex-shrink-0" />
               <div>
@@ -40,20 +46,20 @@ export const BlockchainSection = () => {
             </div>
 
             {/* Animation sequence */}
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-secondary/30 border-rebel-red/20 p-6 text-center">
+            <div ref={cardsAnim.ref} className="grid md:grid-cols-3 gap-6">
+              <Card className={`bg-secondary/30 border-rebel-red/20 p-6 text-center animate-on-scroll stagger-1 ${cardsAnim.isVisible ? 'visible' : ''}`}>
                 <div className="text-4xl mb-4">🐋</div>
                 <h4 className="text-lg font-bold mb-2 text-foreground">Whale Attempts Accumulation</h4>
                 <p className="text-sm text-foreground/70">Large entity tries to buy majority tokens</p>
               </Card>
 
-              <Card className="bg-secondary/30 border-rebel-red/20 p-6 text-center">
+              <Card className={`bg-secondary/30 border-rebel-red/20 p-6 text-center animate-on-scroll stagger-2 ${cardsAnim.isVisible ? 'visible' : ''}`}>
                 <TrendingDown className="w-12 h-12 mx-auto mb-4 text-rebel-red" />
                 <h4 className="text-lg font-bold mb-2 text-foreground">Auto-Detection Triggers</h4>
                 <p className="text-sm text-foreground/70">System detects concentration &gt;15%</p>
               </Card>
 
-              <Card className="bg-secondary/30 border-freedom-blue/20 p-6 text-center">
+              <Card className={`bg-secondary/30 border-freedom-blue/20 p-6 text-center animate-on-scroll stagger-3 ${cardsAnim.isVisible ? 'visible' : ''}`}>
                 <div className="text-4xl mb-4">💥</div>
                 <h4 className="text-lg font-bold mb-2 text-freedom-blue">Instant Redistribution</h4>
                 <p className="text-sm text-foreground/70">Excess tokens devalue & redistribute</p>

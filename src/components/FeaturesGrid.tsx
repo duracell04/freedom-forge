@@ -1,7 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Smartphone, Lock, Shield, Link2, Cpu, Globe } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const FeaturesGrid = () => {
+  const headerAnim = useScrollAnimation({ threshold: 0.2 });
+  const gridAnim = useScrollAnimation({ threshold: 0.1 });
+  
   const features = [
     {
       icon: Smartphone,
@@ -45,7 +49,7 @@ export const FeaturesGrid = () => {
     <section className="parallax-section">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div ref={headerAnim.ref} className={`text-center mb-16 animate-on-scroll ${headerAnim.isVisible ? 'visible' : ''}`}>
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tight mb-6 text-foreground">
               Why AKAFreedom Matters
             </h2>
@@ -54,11 +58,11 @@ export const FeaturesGrid = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div ref={gridAnim.ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="bg-card/50 backdrop-blur-sm border-freedom-blue/20 hover:border-freedom-blue/60 p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-freedom-blue/20 group"
+                className={`bg-card/50 backdrop-blur-sm border-freedom-blue/20 hover:border-freedom-blue/60 p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-freedom-blue/20 group animate-on-scroll stagger-${Math.min(index + 1, 6)} ${gridAnim.isVisible ? 'visible' : ''}`}
               >
                 <div className="mb-6">
                   <div className="w-16 h-16 rounded-lg bg-freedom-blue/10 flex items-center justify-center group-hover:bg-freedom-blue/20 transition-colors">
