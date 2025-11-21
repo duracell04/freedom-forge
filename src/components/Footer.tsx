@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Heart } from "lucide-react";
 
 export const Footer = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 });
@@ -22,6 +24,19 @@ export const Footer = () => {
             <span className="hover:text-freedom-blue transition-colors cursor-pointer">#AlsoKnownAsFreedom</span>
             <span className="hover:text-freedom-blue transition-colors cursor-pointer">#YourAIYourControl</span>
             <span className="hover:text-freedom-blue transition-colors cursor-pointer">#NoAIFeudalism</span>
+          </div>
+
+          {/* Support CTA */}
+          <div className="pt-8">
+            <a href="/donate">
+              <Button
+                size="lg"
+                className="text-lg px-10 py-6 bg-gradient-to-r from-freedom-blue to-primary hover:from-primary hover:to-freedom-blue font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105"
+              >
+                <Heart className="mr-2" />
+                Support the Project
+              </Button>
+            </a>
           </div>
 
           {/* Easter egg hint */}
