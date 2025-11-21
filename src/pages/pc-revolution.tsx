@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { NavLink } from "@/components/NavLink";
-import { ArrowLeft, Building2, Smartphone, Cpu, Users, Clock, TrendingUp, Zap, Shield } from "lucide-react";
+import { ArrowLeft, Building2, Smartphone, Cpu, Users, Clock, TrendingUp, Zap, Shield, BookOpen, FileText, Brain } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import pcRevolutionImage from "@/assets/pc-revolution.jpg";
 
@@ -11,6 +11,7 @@ const PCRevolution = () => {
   const mainframeAnim = useScrollAnimation({ threshold: 0.3 });
   const revolutionAnim = useScrollAnimation({ threshold: 0.3 });
   const parallelsAnim = useScrollAnimation({ threshold: 0.3 });
+  const scholarshipAnim = useScrollAnimation({ threshold: 0.3 });
   const futureAnim = useScrollAnimation({ threshold: 0.3 });
 
   return (
@@ -325,6 +326,135 @@ const PCRevolution = () => {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </section>
+
+        <section ref={scholarshipAnim.ref} className={`mb-20 animate-on-scroll ${scholarshipAnim.isVisible ? "visible" : ""}`}>
+          <h2 className="text-4xl font-bold mb-6 text-center">Scholarly Foundations of Sovereign Memory</h2>
+          <p className="text-lg text-muted-foreground text-center max-w-4xl mx-auto mb-12">
+            The personal AI thesis is not just rhetoric; it stands on decades of cognitive science and differentiable memory research that separates
+            semantic priors ("what the model knows") from episodic traces ("what has happened to you") and proves that local memory systems can
+            outperform centralized control.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <Card className="border-muted/40 bg-card/60">
+              <CardHeader className="flex items-start gap-4">
+                <BookOpen className="w-10 h-10 text-freedom-blue" />
+                <div>
+                  <CardTitle className="text-2xl">Human Memory Grounding</CardTitle>
+                  <p className="text-sm text-muted-foreground">Why episodic vs semantic matters for machine sovereignty</p>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <div>
+                  <p className="font-semibold text-foreground">Tulving (1972)</p>
+                  <p className="text-sm">
+                    Episodic vs semantic memory as the primordial bifurcation; semantic memory is frozen pretrained weights, episodic memory is every
+                    personal trace stored locally.
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Baddeley (2000)</p>
+                  <p className="text-sm">
+                    The episodic buffer critique of narrow context windows; we replace it with hierarchical, zero-latency local buffers instead of
+                    cloud-dependent recall.
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Bender & Koller (2020)</p>
+                  <p className="text-sm">
+                    The Octopus Test on meaning vs form underscores why personal, grounded data is mandatory for true understanding, not internet-scale
+                    slurry.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-freedom-blue/40 bg-card/60">
+              <CardHeader className="flex items-start gap-4">
+                <FileText className="w-10 h-10 text-freedom-blue" />
+                <div>
+                  <CardTitle className="text-2xl">Differentiable External Memory</CardTitle>
+                  <p className="text-sm text-muted-foreground">The lineage of retrieval-native architectures</p>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <div>
+                  <p className="font-semibold text-foreground">Graves et al. (2014)</p>
+                  <p className="text-sm">
+                    Neural Turing Machines introduced soft attention over a memory matrix—the ancestor of RAG and proof that local memory obviates
+                    centralized servers.
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Sukhbaatar et al. (2015)</p>
+                  <p className="text-sm">
+                    End-to-End Memory Networks showed reasoning emerges from iterative attention, the conceptual root of Tree-of-Thought and Reflexion
+                    that now run locally on 7B-class models.
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Santoro et al. (2016)</p>
+                  <p className="text-sm">
+                    Meta-learning with memory-augmented networks separates fast (external vector DB) from slow (parameters) weights—the same division
+                    seen in hippocampus vs neocortex and our local agent stack.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-muted/40 bg-card/60">
+              <CardHeader className="flex items-start gap-4">
+                <Brain className="w-10 h-10 text-freedom-blue" />
+                <div>
+                  <CardTitle className="text-2xl">Neuroscience Alignment</CardTitle>
+                  <p className="text-sm text-muted-foreground">Transformers converging on biological circuits</p>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <div>
+                  <p className="font-semibold text-foreground">Hearne et al. (2025)</p>
+                  <p className="text-sm">
+                    7T fMRI traces attention heads onto frontoparietal and default-mode networks, arguing transformers are a biological-scale substrate,
+                    not mere statistics.
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Anonymous (2025, under review)</p>
+                  <p className="text-sm">
+                    Blueprint for hippocampo-cortical agents: hierarchical temporal scaffolding, Bayesian consolidation, and metacognitive transparency
+                    as design constraints for local AI.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-rebel-red/40 bg-card/60">
+              <CardHeader className="flex items-start gap-4">
+                <Zap className="w-10 h-10 text-rebel-red" />
+                <div>
+                  <CardTitle className="text-2xl">Agency and Self-Correction</CardTitle>
+                  <p className="text-sm text-muted-foreground">Keeping local agents sober and sovereign</p>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <div>
+                  <p className="font-semibold text-foreground">Kumar et al. (2025)</p>
+                  <p className="text-sm">
+                    SCoRe shows self-correction requires online reinforcement learning on self-generated trajectories, not performative SFT remorse—vital
+                    for long-lived local agents.
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Straňák (2025)</p>
+                  <p className="text-sm">
+                    Argues competence beats qualia: symbolic cognition via transformers is already sufficient for dominance, reinforcing the mandate for
+                    ruthless, local efficiency.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
