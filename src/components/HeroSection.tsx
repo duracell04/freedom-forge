@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-chains-breaking.jpg";
+// import heroImage from "@/assets/hero-chains-breaking.jpg";
 
 export const HeroSection = () => {
   return (
@@ -24,14 +24,14 @@ export const HeroSection = () => {
       <div className="container relative z-10 mx-auto px-6 text-center">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Main visual */}
-          <div className="relative">
+          {/* <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
             <img
               src={heroImage}
               alt="AI Freedom - Breaking chains of corporate control"
               className="w-full max-w-4xl mx-auto rounded-lg animate-float electric-pulse"
             />
-          </div>
+          </div> */}
 
           {/* Main headline */}
           <div className="space-y-6">

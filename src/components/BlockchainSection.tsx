@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Shield, AlertTriangle, TrendingDown } from "lucide-react";
-import blockchainImage from "@/assets/blockchain-governance.jpg";
+// import blockchainImage from "@/assets/blockchain-governance.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const BlockchainSection = () => {
@@ -24,14 +24,14 @@ export const BlockchainSection = () => {
           </div>
 
           {/* Visual */}
-          <div ref={imageAnim.ref} className={`relative mb-16 animate-on-scroll-scale ${imageAnim.isVisible ? 'visible' : ''}`}>
+          {/* <div ref={imageAnim.ref} className={`relative mb-16 animate-on-scroll-scale ${imageAnim.isVisible ? 'visible' : ''}`}>
             <img
               src={blockchainImage}
               alt="Blockchain anti-oligarchy protocol"
               className="w-full rounded-lg shadow-2xl"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent rounded-lg" />
-          </div>
+          </div> */}
 
           {/* Anti-Oligarchy Protocol */}
           <Card ref={protocolAnim.ref} className={`bg-card/50 backdrop-blur-sm border-rebel-red/30 p-8 md:p-12 mb-12 animate-on-scroll-large ${protocolAnim.isVisible ? 'visible' : ''}`}>
