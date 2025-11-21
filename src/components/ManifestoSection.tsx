@@ -134,12 +134,19 @@ export const FullManifesto = () => {
             { phase: "Phase 2", title: "Expansion", desc: "Multi-platform support & professional tools" },
             { phase: "Phase 3", title: "Ecosystem", desc: "Developer APIs & community plugins" },
             { phase: "Phase 4", title: "Revolution", desc: "Cognitive sovereignty becomes the norm" },
-          ].map((phase, i) => (
-            <div key={i} className="border-l-4 border-freedom-blue pl-6 py-2">
-              <h4 className="text-2xl font-bold text-freedom-blue mb-2">{phase.phase}: {phase.title}</h4>
-              <p className="text-foreground/80">{phase.desc}</p>
-            </div>
-          ))}
+          ].map((phase, i) => {
+            const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 });
+            return (
+              <div 
+                key={i} 
+                ref={ref}
+                className={`border-l-4 border-freedom-blue pl-6 py-2 animate-on-scroll stagger-${i + 1} ${isVisible ? 'visible' : ''}`}
+              >
+                <h4 className="text-2xl font-bold text-freedom-blue mb-2">{phase.phase}: {phase.title}</h4>
+                <p className="text-foreground/80">{phase.desc}</p>
+              </div>
+            );
+          })}
         </div>
       </ManifestoSection>
 
