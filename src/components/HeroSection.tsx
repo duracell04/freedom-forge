@@ -54,13 +54,15 @@ export const HeroSection = () => {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
-            <Button
-              size="lg"
-              className="text-xl px-12 py-8 bg-gradient-to-r from-rebel-red to-[hsl(var(--rebel-red-end))] hover:from-[hsl(var(--rebel-red-end))] hover:to-rebel-red text-foreground font-bold uppercase tracking-wider shadow-2xl hover:shadow-rebel-red/50 transition-all duration-300 hover:scale-105 glow-rebel group"
-            >
-              Claim Sovereignty Now
-              <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a href="mailto:andro@akalabs.io">
+              <Button
+                size="lg"
+                className="text-xl px-12 py-8 bg-gradient-to-r from-rebel-red to-[hsl(var(--rebel-red-end))] hover:from-[hsl(var(--rebel-red-end))] hover:to-rebel-red text-foreground font-bold uppercase tracking-wider shadow-2xl hover:shadow-rebel-red/50 transition-all duration-300 hover:scale-105 glow-rebel group"
+              >
+                Claim Sovereignty Now
+                <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
 
           {/* Scroll indicator */}
