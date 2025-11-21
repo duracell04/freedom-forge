@@ -11,6 +11,8 @@ class RootDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
             rel="stylesheet"
           />
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+          <link rel="alternate icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />

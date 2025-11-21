@@ -1,0 +1,35 @@
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Titanium angular infinity made of two interlocking As with broken chain center -->
+  <defs>
+    <linearGradient id="freedomGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4FF"/>
+      <stop offset="100%" style="stop-color:#00D4FF"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g transform="translate(200,250)">
+    <!-- Left A-loop (angular) -->
+    <path d="M-120,0 L-80,-140 L-40,-140 L-20,-100 L-60,0 L-20,100 L-40,140 L-80,140 Z" fill="#AAAAAA" stroke="#AAAAAA" stroke-width="20"/>
+    <!-- Right A-loop (mirrored) -->
+    <path d="M120,0 L80,-140 L40,-140 L20,-100 L60,0 L20,100 L40,140 L80,140 Z" fill="#AAAAAA" stroke="#AAAAAA" stroke-width="20"/>
+    <!-- Center crossbar with BROKEN CHAIN effect -->
+    <rect x="-50" y="-20" width="100" height="40" fill="#000000"/>
+    <!-- Left part of crossbar -->
+    <rect x="-50" y="-20" width="40" height="40" fill="#AAAAAA"/>
+    <!-- Right part of crossbar -->
+    <rect x="10" y="-20" width="40" height="40" fill="#AAAAAA"/>
+    <!-- Freedom Blue break glow -->
+    <rect x="-10" y="-30" width="20" height="60" fill="url(#freedomGlow)" filter="url(#glow)" opacity="0.9"/>
+    
+    <!-- Hidden Mars silhouette in right loop -->
+    <circle cx="60" cy="-80" r="15" fill="#000000" opacity="0.3"/>
+    <circle cx="65" cy="-85" r="8" fill="#000000" opacity="0.5"/>
+  </g>
+</svg>
