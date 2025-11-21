@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { ethers } from "ethers";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { toast } from "@/hooks/use-toast";
+import { Wallet, Heart, Shield, TrendingUp } from "lucide-react";
+import { NavLink } from "@/components/NavLink";
 
 declare global {
   interface Window {
@@ -11,12 +17,6 @@ declare global {
     };
   }
 }
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "@/hooks/use-toast";
-import { Wallet, Heart, Shield, TrendingUp } from "lucide-react";
-import { NavLink } from "@/components/NavLink";
 
 interface Donation {
   name: string;
@@ -44,7 +44,7 @@ const Donate = () => {
           title: "Wallet Connected",
           description: `Connected: ${accounts[0].slice(0, 6)}...${accounts[0].slice(-4)}`,
         });
-      } catch (error) {
+      } catch (_error) {
         toast({
           title: "Connection Failed",
           description: "Failed to connect wallet. Please try again.",
@@ -82,10 +82,9 @@ const Donate = () => {
     try {
       const provider = new ethers.BrowserProvider(window.ethereum);
       const signer = await provider.getSigner();
-      
-      // Project wallet address (replace with actual address)
+
       const projectWallet = "0x0000000000000000000000000000000000000000";
-      
+
       const tx = await signer.sendTransaction({
         to: projectWallet,
         value: ethers.parseEther(donationAmount),
@@ -96,11 +95,11 @@ const Donate = () => {
       const newDonation: Donation = {
         name: donorName,
         amount: `${donationAmount} ETH`,
-        timestamp: new Date().toISOString().split('T')[0],
+        timestamp: new Date().toISOString().split("T")[0],
       };
 
       setDonations([newDonation, ...donations]);
-      
+
       toast({
         title: "Thank You! 🎉",
         description: `Your donation of ${donationAmount} ETH has been received!`,
@@ -108,7 +107,7 @@ const Donate = () => {
 
       setDonorName("");
       setDonationAmount("");
-    } catch (error) {
+    } catch (_error) {
       toast({
         title: "Transaction Failed",
         description: "Failed to process donation. Please try again.",
@@ -119,20 +118,19 @@ const Donate = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <header className="border-b border-border/40 sticky top-0 bg-background/95 backdrop-blur-sm z-50">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <NavLink to="/" className="text-2xl font-bold text-freedom-blue">
+          <NavLink href="/" className="text-2xl font-bold text-freedom-blue">
             AKAFreedom
           </NavLink>
           <div className="flex gap-6">
-            <NavLink to="/" className="text-foreground/80 hover:text-freedom-blue transition-colors">
+            <NavLink href="/" className="text-foreground/80 hover:text-freedom-blue transition-colors">
               Home
             </NavLink>
-            <NavLink to="/manifesto" className="text-foreground/80 hover:text-freedom-blue transition-colors">
+            <NavLink href="/manifesto" className="text-foreground/80 hover:text-freedom-blue transition-colors">
               Manifesto
             </NavLink>
-            <NavLink to="/donate" className="text-freedom-blue font-semibold">
+            <NavLink href="/donate" className="text-freedom-blue font-semibold">
               Donate
             </NavLink>
           </div>
@@ -140,7 +138,6 @@ const Donate = () => {
       </header>
 
       <main className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-freedom-blue to-primary bg-clip-text text-transparent">
             Support Cognitive Freedom
@@ -151,24 +148,17 @@ const Donate = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Donation Card */}
           <Card className="border-freedom-blue/30 bg-card/50 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Heart className="text-freedom-blue" />
                 Make a Donation
               </CardTitle>
-              <CardDescription>
-                Connect your Web3 wallet and contribute to the project
-              </CardDescription>
+              <CardDescription>Connect your Web3 wallet and contribute to the project</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               {!walletAddress ? (
-                <Button 
-                  onClick={connectWallet} 
-                  className="w-full"
-                  size="lg"
-                >
+                <Button onClick={connectWallet} className="w-full" size="lg">
                   <Wallet className="mr-2" />
                   Connect Wallet
                 </Button>
@@ -206,11 +196,7 @@ const Donate = () => {
                       />
                     </div>
 
-                    <Button 
-                      onClick={handleDonate} 
-                      className="w-full"
-                      size="lg"
-                    >
+                    <Button onClick={handleDonate} className="w-full" size="lg">
                       <Heart className="mr-2" />
                       Donate {donationAmount && `${donationAmount} ETH`}
                     </Button>
@@ -238,18 +224,15 @@ const Donate = () => {
             </CardContent>
           </Card>
 
-          {/* Donations List */}
           <Card className="border-freedom-blue/30 bg-card/50 backdrop-blur-sm">
             <CardHeader>
               <CardTitle>Recent Donations</CardTitle>
-              <CardDescription>
-                Maximum transparency. Every contribution counts.
-              </CardDescription>
+              <CardDescription>Maximum transparency. Every contribution counts.</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 {donations.map((donation, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="flex items-center justify-between p-4 bg-muted/30 rounded-lg border border-border/30 hover:border-freedom-blue/50 transition-all"
                   >

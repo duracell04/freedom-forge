@@ -93,7 +93,7 @@ export const BlockchainSection = () => {
             <p className="text-3xl font-black text-freedom-blue mb-8">
               No oligarchy possible. Ever.
             </p>
-            <NavLink to="/governance">
+            <NavLink href="/governance">
               <Button 
                 variant="link"
                 className="text-lg text-freedom-blue/80 hover:text-freedom-blue underline-offset-4"

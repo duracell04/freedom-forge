@@ -88,7 +88,7 @@ export const PCRevolutionSection = () => {
             </div>
             
             <div className="text-center mt-8">
-              <NavLink to="/pc-revolution">
+              <NavLink href="/pc-revolution">
                 <Button 
                   variant="link"
                   className="text-lg text-freedom-blue/80 hover:text-freedom-blue underline-offset-4"

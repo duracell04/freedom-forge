@@ -13,23 +13,22 @@ const Governance = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <header className="border-b border-border/40 sticky top-0 bg-background/95 backdrop-blur-sm z-50">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <NavLink to="/" className="text-2xl font-bold text-freedom-blue">
+          <NavLink href="/" className="text-2xl font-bold text-freedom-blue">
             AKAFreedom
           </NavLink>
           <div className="flex gap-6">
-            <NavLink to="/" className="text-foreground/80 hover:text-freedom-blue transition-colors">
+            <NavLink href="/" className="text-foreground/80 hover:text-freedom-blue transition-colors">
               Home
             </NavLink>
-            <NavLink to="/manifesto" className="text-foreground/80 hover:text-freedom-blue transition-colors">
+            <NavLink href="/manifesto" className="text-foreground/80 hover:text-freedom-blue transition-colors">
               Manifesto
             </NavLink>
-            <NavLink to="/governance" className="text-freedom-blue font-semibold">
+            <NavLink href="/governance" className="text-freedom-blue font-semibold">
               Governance
             </NavLink>
-            <NavLink to="/donate" className="text-foreground/80 hover:text-freedom-blue transition-colors">
+            <NavLink href="/donate" className="text-foreground/80 hover:text-freedom-blue transition-colors">
               Donate
             </NavLink>
           </div>
@@ -37,29 +36,24 @@ const Governance = () => {
       </header>
 
       <main className="container mx-auto px-4 py-16">
-        {/* Back Button */}
-        <NavLink to="/">
+        <NavLink href="/">
           <Button variant="ghost" className="mb-8 text-freedom-blue hover:text-freedom-blue/80">
             <ArrowLeft className="mr-2" />
             Back to Home
           </Button>
         </NavLink>
 
-        {/* Hero Section */}
-        <div ref={heroAnim.ref} className={`text-center mb-20 max-w-4xl mx-auto animate-on-scroll ${heroAnim.isVisible ? 'visible' : ''}`}>
+        <div ref={heroAnim.ref} className={`text-center mb-20 max-w-4xl mx-auto animate-on-scroll ${heroAnim.isVisible ? "visible" : ""}`}>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-freedom-blue to-primary bg-clip-text text-transparent">
             Blockchain Governance System
           </h1>
-          <p className="text-2xl text-muted-foreground mb-8">
-            Mathematically guaranteed decentralization through influence tokens
-          </p>
+          <p className="text-2xl text-muted-foreground mb-8">Mathematically guaranteed decentralization through influence tokens</p>
           <div className="flex items-center justify-center gap-3 text-freedom-blue font-mono text-lg">
             <Shield className="w-6 h-6" />
             <span>Anti-Oligarchy Protocol Active</span>
           </div>
         </div>
 
-        {/* Core Principles */}
         <section className="mb-20">
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="border-freedom-blue/30 bg-card/50">
@@ -68,9 +62,7 @@ const Governance = () => {
                 <CardTitle>True Decentralization</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Ownership managed by blockchain — distributed, transparent, and immutable.
-                </p>
+                <p className="text-muted-foreground">Ownership managed by blockchain — distributed, transparent, and immutable.</p>
               </CardContent>
             </Card>
 
@@ -80,9 +72,7 @@ const Governance = () => {
                 <CardTitle>Uncapturable DAO</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Cannot be acquired, sold, or compromised. Legally structured for permanence.
-                </p>
+                <p className="text-muted-foreground">Cannot be acquired, sold, or compromised. Legally structured for permanence.</p>
               </CardContent>
             </Card>
 
@@ -92,16 +82,13 @@ const Governance = () => {
                 <CardTitle>Community First</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Power distributed among many, preventing any single entity from control.
-                </p>
+                <p className="text-muted-foreground">Power distributed among many, preventing any single entity from control.</p>
               </CardContent>
             </Card>
           </div>
         </section>
 
-        {/* How It Works */}
-        <section ref={howItWorksAnim.ref} className={`mb-20 animate-on-scroll ${howItWorksAnim.isVisible ? 'visible' : ''}`}>
+        <section ref={howItWorksAnim.ref} className={`mb-20 animate-on-scroll ${howItWorksAnim.isVisible ? "visible" : ""}`}>
           <h2 className="text-4xl font-bold mb-8 text-center">How Influence Tokens Work</h2>
           <div className="max-w-4xl mx-auto space-y-6">
             <Card className="border-freedom-blue/30 bg-card/50">
@@ -118,19 +105,27 @@ const Governance = () => {
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-freedom-blue mt-0.5 flex-shrink-0" />
-                    <span><strong>Early Contributors:</strong> Developers, designers, and community builders</span>
+                    <span>
+                      <strong>Early Contributors:</strong> Developers, designers, and community builders
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-freedom-blue mt-0.5 flex-shrink-0" />
-                    <span><strong>Community Members:</strong> Active participants who help grow the ecosystem</span>
+                    <span>
+                      <strong>Community Members:</strong> Active participants who help grow the ecosystem
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-freedom-blue mt-0.5 flex-shrink-0" />
-                    <span><strong>Donors & Supporters:</strong> Those who financially support the project</span>
+                    <span>
+                      <strong>Donors & Supporters:</strong> Those who financially support the project
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-freedom-blue mt-0.5 flex-shrink-0" />
-                    <span><strong>Future Participants:</strong> New members joining the movement</span>
+                    <span>
+                      <strong>Future Participants:</strong> New members joining the movement
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -144,9 +139,7 @@ const Governance = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg text-muted-foreground mb-4">
-                  Each token grants voting rights on critical decisions:
-                </p>
+                <p className="text-lg text-muted-foreground mb-4">Each token grants voting rights on critical decisions:</p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-freedom-blue mt-0.5 flex-shrink-0" />
@@ -184,8 +177,7 @@ const Governance = () => {
           </div>
         </section>
 
-        {/* Anti-Whale Protection */}
-        <section ref={whaleProtectionAnim.ref} className={`mb-20 animate-on-scroll ${whaleProtectionAnim.isVisible ? 'visible' : ''}`}>
+        <section ref={whaleProtectionAnim.ref} className={`mb-20 animate-on-scroll ${whaleProtectionAnim.isVisible ? "visible" : ""}`}>
           <h2 className="text-4xl font-bold mb-8 text-center">Anti-Oligarchy Protocol</h2>
           <p className="text-xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
             The system mathematically prevents any single entity from accumulating too much power.
@@ -195,13 +187,10 @@ const Governance = () => {
             <Card className="border-rebel-red/40 bg-card/50 mb-8">
               <CardHeader>
                 <CardTitle className="text-2xl text-center">The Whale Protection Mechanism</CardTitle>
-                <CardDescription className="text-center text-lg">
-                  Automatic redistribution when concentration exceeds safe thresholds
-                </CardDescription>
+                <CardDescription className="text-center text-lg">Automatic redistribution when concentration exceeds safe thresholds</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-8">
-                  {/* Step 1 */}
                   <div className="flex items-start gap-6 p-6 bg-muted/20 rounded-lg border border-border/30">
                     <div className="flex-shrink-0">
                       <div className="w-16 h-16 bg-freedom-blue/20 rounded-full flex items-center justify-center">
@@ -216,7 +205,6 @@ const Governance = () => {
                     </div>
                   </div>
 
-                  {/* Step 2 */}
                   <div className="flex items-start gap-6 p-6 bg-muted/20 rounded-lg border border-border/30">
                     <div className="flex-shrink-0">
                       <div className="w-16 h-16 bg-rebel-red/20 rounded-full flex items-center justify-center">
@@ -226,7 +214,8 @@ const Governance = () => {
                     <div>
                       <h3 className="text-xl font-bold mb-2">Step 2: Auto-Detection Triggers</h3>
                       <p className="text-muted-foreground mb-3">
-                        Smart contracts continuously monitor token distribution. When any single address exceeds <strong className="text-freedom-blue">15% concentration</strong>, the protocol activates.
+                        Smart contracts continuously monitor token distribution. When any single address exceeds{" "}
+                        <strong className="text-freedom-blue">15% concentration</strong>, the protocol activates.
                       </p>
                       <div className="bg-background/50 p-4 rounded border border-freedom-blue/30 font-mono text-sm">
                         if (holderPercentage &gt; 15%) {"{"} triggerRedistribution(); {"}"}
@@ -234,7 +223,6 @@ const Governance = () => {
                     </div>
                   </div>
 
-                  {/* Step 3 */}
                   <div className="flex items-start gap-6 p-6 bg-muted/20 rounded-lg border border-border/30">
                     <div className="flex-shrink-0">
                       <div className="w-16 h-16 bg-freedom-blue/20 rounded-full flex items-center justify-center">
@@ -243,31 +231,35 @@ const Governance = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2">Step 3: Instant Redistribution</h3>
-                      <p className="text-muted-foreground mb-3">
-                        Excess tokens above the threshold are automatically:
-                      </p>
+                      <p className="text-muted-foreground mb-3">Excess tokens above the threshold are automatically:</p>
                       <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-start gap-2">
                           <span className="text-freedom-blue">•</span>
-                          <span><strong>Devalued:</strong> Their voting power drops to 0%</span>
+                          <span>
+                            <strong>Devalued:</strong> Their voting power drops to 0%
+                          </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-freedom-blue">•</span>
-                          <span><strong>Redistributed:</strong> Excess tokens spread to community members</span>
+                          <span>
+                            <strong>Redistributed:</strong> Excess tokens spread to community members
+                          </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-freedom-blue">•</span>
-                          <span><strong>Locked:</strong> The whale can't sell or transfer devalued tokens</span>
+                          <span>
+                            <strong>Locked:</strong> The whale can't sell or transfer devalued tokens
+                          </span>
                         </li>
                       </ul>
                     </div>
                   </div>
 
-                  {/* Result */}
                   <div className="p-8 bg-gradient-to-r from-freedom-blue/10 to-primary/10 rounded-lg border-2 border-freedom-blue/50 text-center">
                     <h3 className="text-2xl font-bold mb-3 text-freedom-blue">Mathematical Guarantee</h3>
                     <p className="text-xl">
-                      Even if BlackRock buys 99% of tokens, their voting power = <strong className="text-3xl text-freedom-blue">0%</strong>
+                      Even if BlackRock buys 99% of tokens, their voting power ={" "}
+                      <strong className="text-3xl text-freedom-blue">0%</strong>
                     </p>
                   </div>
                 </div>
@@ -276,8 +268,7 @@ const Governance = () => {
           </div>
         </section>
 
-        {/* Tokenomics */}
-        <section ref={tokenomicsAnim.ref} className={`mb-20 animate-on-scroll ${tokenomicsAnim.isVisible ? 'visible' : ''}`}>
+        <section ref={tokenomicsAnim.ref} className={`mb-20 animate-on-scroll ${tokenomicsAnim.isVisible ? "visible" : ""}`}>
           <h2 className="text-4xl font-bold mb-8 text-center">Token Distribution Model</h2>
           <div className="max-w-4xl mx-auto">
             <Card className="border-freedom-blue/30 bg-card/50">
@@ -326,8 +317,7 @@ const Governance = () => {
           </div>
         </section>
 
-        {/* Legal & Technical Guarantees */}
-        <section ref={guaranteesAnim.ref} className={`mb-20 animate-on-scroll ${guaranteesAnim.isVisible ? 'visible' : ''}`}>
+        <section ref={guaranteesAnim.ref} className={`mb-20 animate-on-scroll ${guaranteesAnim.isVisible ? "visible" : ""}`}>
           <h2 className="text-4xl font-bold mb-8 text-center">Uncapturable by Design</h2>
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
             <Card className="border-freedom-blue/30 bg-card/50">
@@ -392,27 +382,24 @@ const Governance = () => {
                 <p className="text-xl text-muted-foreground mb-6">
                   The system is designed to be permanent, decentralized, and resistant to capture by any entity — corporate, governmental, or individual.
                 </p>
-                <p className="text-2xl font-bold text-freedom-blue">
-                  This is freedom by mathematics.
-                </p>
+                <p className="text-2xl font-bold text-freedom-blue">This is freedom by mathematics.</p>
               </CardContent>
             </Card>
           </div>
         </section>
 
-        {/* CTA */}
         <section className="text-center">
           <h2 className="text-3xl font-bold mb-6">Join the Decentralized Future</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Contribute to the project and earn influence tokens. Help build a future where AI serves humanity, not corporations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <NavLink to="/donate">
+            <NavLink href="/donate">
               <Button size="lg" className="text-lg px-8 py-6">
                 Support & Earn Tokens
               </Button>
             </NavLink>
-            <NavLink to="/manifesto">
+            <NavLink href="/manifesto">
               <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-freedom-blue text-freedom-blue hover:bg-freedom-blue/10">
                 Read Full Manifesto
               </Button>

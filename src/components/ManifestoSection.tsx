@@ -1,7 +1,7 @@
+import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, Lock, Cpu, Users, Zap, Globe, TrendingUp, Clock, Heart, FileText } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 interface SectionProps {
@@ -35,6 +35,29 @@ const ManifestoSection = ({ title, children, variant = "default" }: SectionProps
   );
 };
 
+const PhaseTimelineItem = ({
+  phase,
+  index,
+}: {
+  phase: { phase: string; title: string; desc: string };
+  index: number;
+}) => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 });
+
+  return (
+    <div
+      key={phase.phase}
+      ref={ref}
+      className={`border-l-4 border-freedom-blue pl-6 py-2 animate-on-scroll stagger-${index + 1} ${isVisible ? "visible" : ""}`}
+    >
+      <h4 className="text-2xl font-bold text-freedom-blue mb-2">
+        {phase.phase}: {phase.title}
+      </h4>
+      <p className="text-foreground/80">{phase.desc}</p>
+    </div>
+  );
+};
+
 export const FullManifesto = () => {
   const cogSovAnim = useScrollAnimation({ threshold: 0.3 });
   
@@ -49,7 +72,7 @@ export const FullManifesto = () => {
           <p className="mt-4 text-titanium">— Andro Kasrashvili (AKA)</p>
         </Card>
         <div className="mt-8 text-center">
-          <Link to="/manifesto">
+          <Link href="/manifesto">
             <Button variant="outline" className="border-freedom-blue/30 text-freedom-blue hover:bg-freedom-blue/10 gap-2">
               <FileText className="w-5 h-5" />
               Read Full Manifesto
@@ -142,19 +165,9 @@ export const FullManifesto = () => {
             { phase: "Phase 2", title: "Expansion", desc: "Multi-platform support & professional tools" },
             { phase: "Phase 3", title: "Ecosystem", desc: "Developer APIs & community plugins" },
             { phase: "Phase 4", title: "Revolution", desc: "Cognitive sovereignty becomes the norm" },
-          ].map((phase, i) => {
-            const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 });
-            return (
-              <div 
-                key={i} 
-                ref={ref}
-                className={`border-l-4 border-freedom-blue pl-6 py-2 animate-on-scroll stagger-${i + 1} ${isVisible ? 'visible' : ''}`}
-              >
-                <h4 className="text-2xl font-bold text-freedom-blue mb-2">{phase.phase}: {phase.title}</h4>
-                <p className="text-foreground/80">{phase.desc}</p>
-              </div>
-            );
-          })}
+          ].map((phase, index) => (
+            <PhaseTimelineItem key={phase.phase} phase={phase} index={index} />
+          ))}
         </div>
       </ManifestoSection>
 
