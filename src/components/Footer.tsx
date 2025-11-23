@@ -22,7 +22,7 @@ export const Footer = () => {
           <div className="flex flex-wrap justify-center gap-4 text-titanium">
             <span className="hover:text-freedom-blue transition-colors cursor-pointer">#CognitiveSovereignty</span>
             <span className="hover:text-freedom-blue transition-colors cursor-pointer">#AlsoKnownAsFreedom</span>
-            <span className="hover:text-freedom-blue transition-colors cursor-pointer">#YourAIYourControl</span>
+            <span className="hover:text-freedom-blue transition-colors cursor-pointer">#AKA8F</span>
             <span className="hover:text-freedom-blue transition-colors cursor-pointer">#NoAIFeudalism</span>
           </div>
 

@@ -19,7 +19,7 @@ const BaseApp = ({ Component, pageProps }: AppProps) => {
         <title>AKAFreedom - AI That's Also Known As Freedom</title>
         <meta
           name="description"
-          content="Your thoughts stay yours. No servers. No spying. No betrayal. Ever. AKA8 runs entirely on your device. Cognitive sovereignty or bust."
+          content="Your thoughts stay yours. No servers. No spying. No betrayal. Ever. AKA8F runs entirely on your device. Cognitive sovereignty or bust."
         />
         <meta name="author" content="AKALabs.io" />
 

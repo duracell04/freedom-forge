@@ -21,7 +21,7 @@ export const BlockchainSection = () => {
               Decentralized Ownership via Blockchain
             </h2>
             <p className="text-2xl text-freedom-blue font-bold mb-4">
-              Ownership of AKA8 is managed by blockchain — truly decentralized, forever.
+              Ownership of AKAFreedom is managed by blockchain — truly decentralized, forever.
             </p>
           </div>
 

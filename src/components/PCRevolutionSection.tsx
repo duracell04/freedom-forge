@@ -83,7 +83,7 @@ export const PCRevolutionSection = () => {
               </Card>
               <Card className="bg-freedom-blue/10 border-freedom-blue/30 p-6">
                 <h4 className="text-xl font-bold mb-3 text-freedom-blue">2025: "AI is for tech giants"</h4>
-                <p className="text-foreground/90">Now comes AKA8. Intelligence becomes personal.</p>
+                <p className="text-foreground/90">Now comes AKA8F. Intelligence becomes personal.</p>
               </Card>
             </div>
             

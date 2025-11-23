@@ -120,7 +120,7 @@ export const FullManifesto = () => {
       <ManifestoSection title="The Alternative We're Building" variant="success">
         <h3 className="text-3xl font-bold text-freedom-blue mb-6">Cognitive Sovereignty</h3>
         <p className="text-2xl mb-6">
-          AKA8 runs entirely on your device. Your phone. Your laptop. Your hardware. Your mind stays yours.
+          AKA8F runs entirely on your device. Your phone. Your laptop. Your hardware. Your mind stays yours.
         </p>
         <div ref={cogSovAnim.ref} className={`bg-card/30 border border-freedom-blue/30 rounded-lg p-6 text-center ${cogSovAnim.isVisible ? 'visible' : ''}`}>
           <p className="text-xl font-mono text-freedom-blue space-y-3">
@@ -161,7 +161,7 @@ export const FullManifesto = () => {
       <ManifestoSection title="The Path Forward">
         <div className="space-y-8">
           {[
-            { phase: "Phase 1", title: "Foundation", desc: "AKA8 on-device AI available now" },
+            { phase: "Phase 1", title: "Foundation", desc: "AKA8F on-device AI available now" },
             { phase: "Phase 2", title: "Expansion", desc: "Multi-platform support & professional tools" },
             { phase: "Phase 3", title: "Ecosystem", desc: "Developer APIs & community plugins" },
             { phase: "Phase 4", title: "Revolution", desc: "Cognitive sovereignty becomes the norm" },
@@ -205,7 +205,7 @@ export const FullManifesto = () => {
         <div className="grid md:grid-cols-2 gap-6">
           {[
             { role: "Developers", action: "Build plugins. Contribute code. Shape the future." },
-            { role: "Professionals", action: "Use AKA8 in your work. Prove sovereignty works." },
+            { role: "Professionals", action: "Use AKA8F in your work. Prove sovereignty works." },
             { role: "Everyone", action: "Choose cognitive sovereignty. Spread the word." },
             { role: "Enterprises", action: "Deploy on-premise AI. Own your intelligence." },
           ].map((item, i) => (
